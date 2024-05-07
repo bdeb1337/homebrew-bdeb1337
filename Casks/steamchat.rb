@@ -1,8 +1,8 @@
 cask "steamchat" do
-  version "0.1.1"
-  sha256 "81a4be1db1dad86f89f75068d640bb76886b1d0a305011aa5179558725033fc2"
+  version "0.1.2"
+  sha256 "3418bccdd33a26f132fb6977d2f169dd1c8b4eaa338f337b15473479d1e5a0cd"
 
-  url "https://github.com/bdeb1337/steamchat/releases/download/v#{version}/steamchat-#{version}.dmg"
+  url "https://github.com/bdeb1337/steamchat/releases/download/v#{version}/steamchat-#{version}-universal.dmg"
   name "steamchat"
   desc "Electron-based web wrapper for Steam Chat"
   homepage "https://github.com/bdeb1337/steamchat"
