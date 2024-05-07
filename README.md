@@ -1,4 +1,10 @@
-# Bdeb1337 Bdeb1337
+[![brew test-bot](https://github.com/bdeb1337/homebrew-bdeb1337/actions/workflows/tests.yml/badge.svg)](https://github.com/bdeb1337/homebrew-bdeb1337/actions/workflows/tests.yml)
+
+# bdeb1337's homebrew tap
+
+## What software is available?
+
+* [**`steamchat`**](https://github.com/bdeb1337/steamchat): A steam chat client for macOS.
 
 ## How do I install these formulae?
 
