@@ -15,5 +15,4 @@ cask "steamchat" do
   app "steamchat.app"
 
   zap trash: "~/Library/Application Support/steamchat"
-  ]
 end
