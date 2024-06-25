@@ -18,6 +18,11 @@ class Dsc < Formula
 
   def install
     prefix.install Dir["*"]
-    bin.install_symlink prefix/"dsc"
+    # Create a wrapper script
+    (bin/"dsc").write <<~EOS
+      #!/bin/bash
+      cd #{prefix} && ./dsc "$@"
+    EOS
+    (bin/"dsc").chmod 0755
   end
 end
