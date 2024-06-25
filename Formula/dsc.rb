@@ -17,8 +17,6 @@ class Dsc < Formula
     regex(/^v?(\d+(?:\.\d+)+(?:-\w+(?:\.\w+)*)?)$/i)
   end
 
-  depends_on macos: ">= :mojave"
-
   def install
     prefix.install Dir["*"]
     bin.install_symlink prefix/"dsc"
