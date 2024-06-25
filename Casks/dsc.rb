@@ -12,7 +12,7 @@ cask "dsc" do
   
     livecheck do
       url :url
-      regex(/^(?:v)?(\d+(?:\.\d+)+)(?:-\w+(?:\.\w+)*)?$/i)
+      regex(/^v?(\d+(?:\.\d+)+(?:-\w+(?:\.\w+)*)?)$/i)
     end
   
     depends_on macos: ">= :mojave"
