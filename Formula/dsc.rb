@@ -2,7 +2,7 @@ class Dsc < Formula
   desc "Microsoft Desired State Configuration v3"
   homepage "https://github.com/PowerShell/DSC"
   version "v3.0.0-preview.8"
-  version_without_v = version.delete_prefix('v')
+  version_without_v = version.to_s.delete_prefix('v')
 
   if Hardware::CPU.intel?
     sha256 "fc3aaa3f0a36f48d220726895bbf8a3375c43a926df3d3c57be873313846eeef"
