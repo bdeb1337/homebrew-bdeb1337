@@ -3,9 +3,7 @@ class Dsc < Formula
   homepage "https://github.com/PowerShell/DSC"
   version "3.0.0-preview.8"
 
-  arch = ""
-
-  on_macos do
+  if OS.mac?
     if Hardware::CPU.intel?
       arch = "x86_64-apple-darwin"
       sha256 = "fc3aaa3f0a36f48d220726895bbf8a3375c43a926df3d3c57be873313846eeef"
@@ -13,9 +11,7 @@ class Dsc < Formula
       arch = "aarch64-apple-darwin"
       sha256 = "02378b85bde208238acc55290ef5b1aa3b5ca884ad514d7a6bc01334c287274c"
     end
-  end
-
-  on_linux do
+  elsif OS.linux?
     if Hardware::CPU.intel?
       arch = "x86_64-unknown-linux-gnu"
       sha256 "677264514d58b339f75795d2627f8c288642c096db8c6c544fd673d684044e15"
