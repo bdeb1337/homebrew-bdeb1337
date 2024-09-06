@@ -1,9 +1,4 @@
 class Dsc < Formula
-  desc "Microsoft Desired State Configuration v3"
-  homepage "https://github.com/PowerShell/DSC"
-  url "https://github.com/PowerShell/DSC/releases/download/v#{version}/DSC-#{version}-#{arch}.tar.gz"
-  version "3.0.0-preview.8"
-
   if OS.mac?
     if Hardware::CPU.intel?
       arch = "x86_64-apple-darwin"
@@ -21,6 +16,11 @@ class Dsc < Formula
       sha256 "668f15f564655145b3c9448c5c4c410521a777faa09117b36cccd94e00165f80"
     end
   end
+
+  desc "Microsoft Desired State Configuration v3"
+  homepage "https://github.com/PowerShell/DSC"
+  url "https://github.com/PowerShell/DSC/releases/download/v#{version}/DSC-#{version}-#{arch}.tar.gz"
+  version "3.0.0-preview.8"
 
   livecheck do
     url :url
