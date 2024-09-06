@@ -1,16 +1,21 @@
 class Dsc < Formula
+  name "Desired State Configuration v3"
+  name "dscv3"
   desc "Microsoft Desired State Configuration v3"
   homepage "https://github.com/PowerShell/DSC"
   version "3.0.0-preview.8"
 
-  on_intel do
+  arch = Hardware::CPU.intel? ? "x86_64-apple-darwin" : "aarch64-apple-darwin"
+
+  if Hardware::CPU.intel?
+    # x86_64 sha256
     sha256 "fc3aaa3f0a36f48d220726895bbf8a3375c43a926df3d3c57be873313846eeef"
-    url "https://github.com/PowerShell/DSC/releases/download/v3.0.0-preview.8/DSC-3.0.0-preview.8-x86_64-apple-darwin.tar.gz"
-  end
-  on_arm do
+  else
+    # arm64 sha256
     sha256 "02378b85bde208238acc55290ef5b1aa3b5ca884ad514d7a6bc01334c287274c"
-    url "https://github.com/PowerShell/DSC/releases/download/v3.0.0-preview.8/DSC-3.0.0-preview.8-aarch64-apple-darwin.tar.gz"
   end
+
+  url "https://github.com/PowerShell/DSC/releases/download/v#{version}/DSC-#{version}-#{arch}.tar.gz"
 
   livecheck do
     url :url
